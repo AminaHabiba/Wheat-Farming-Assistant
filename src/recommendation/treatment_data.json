@@ -1,0 +1,208 @@
+{
+    "healthy": {
+        "immediate_actions": [
+            "No treatment required at this time",
+            "Continue regular monitoring every 7-10 days",
+            "Maintain current farming practices"
+        ],
+        "chemical_treatments": [],
+        "biological_treatments": [
+            "Continue using beneficial microorganisms if already applied",
+            "Maintain healthy soil biology"
+        ],
+        "preventive_measures": [
+            "Regularly inspect leaves for early signs of disease",
+            "Remove any weeds from the field",
+            "Ensure proper drainage to avoid waterlogging",
+            "Avoid excessive nitrogen fertilization",
+            "Keep field clean from crop debris"
+        ],
+        "application_timing": "No treatment needed currently",
+        "safety_precautions": []
+    },
+
+    "leaf_rust": {
+        "immediate_actions": [
+            "Apply fungicide immediately upon detection",
+            "Start treatment within 48 hours of detection",
+            "Remove and destroy heavily infected leaves",
+            "Avoid working in wet fields to prevent spread",
+            "Inform neighboring farmers for area-wide control"
+        ],
+        "chemical_treatments": [
+            {
+                "name": "Propiconazole 25% EC",
+                "brand_names": ["Tilt 250 EC", "Bumper 250 EC"],
+                "dose": "500 ml per acre",
+                "method": "Foliar spray",
+                "frequency": "Repeat after 14 days if needed",
+                "effectiveness": "Very High",
+                "notes": "Most effective and widely available in Pakistan"
+            },
+            {
+                "name": "Tebuconazole 25.9% EC",
+                "brand_names": ["Folicur", "Raxil"],
+                "dose": "400 ml per acre",
+                "method": "Foliar spray",
+                "frequency": "Once, repeat after 21 days if needed",
+                "effectiveness": "High",
+                "notes": "Good systemic action against rust diseases"
+            },
+            {
+                "name": "Mancozeb 80% WP",
+                "brand_names": ["Dithane M-45", "Manzeb"],
+                "dose": "600 g per acre",
+                "method": "Foliar spray",
+                "frequency": "Every 10-14 days",
+                "effectiveness": "Medium",
+                "notes": "Protective fungicide — apply before disease spreads"
+            }
+        ],
+        "biological_treatments": [
+            "Apply Trichoderma-based biocontrol agents",
+            "Use Bacillus subtilis formulations as preventive spray",
+            "Neem oil spray (5ml per liter) as early-stage treatment"
+        ],
+        "preventive_measures": [
+            "Use rust-resistant wheat varieties such as NARC-2011 or Faisalabad-2008",
+            "Sow at recommended time — avoid late sowing",
+            "Avoid excessive nitrogen which increases susceptibility",
+            "Maintain proper plant spacing for air circulation",
+            "Remove crop debris after harvest",
+            "Rotate crops to break disease cycle",
+            "Apply balanced fertilizers — excess nitrogen increases rust risk"
+        ],
+        "application_timing": "Apply fungicide in early morning or evening. Avoid spraying in hot afternoon sun or before rain.",
+        "safety_precautions": [
+            "Wear gloves, mask and protective clothing during spray",
+            "Do not spray near water bodies or fish ponds",
+            "Keep children and animals away during spraying",
+            "Wash hands thoroughly after handling chemicals",
+            "Follow waiting period before harvest (usually 14-21 days)"
+        ]
+    },
+
+    "stripe_rust": {
+        "immediate_actions": [
+            "URGENT — Apply fungicide within 24 hours",
+            "Stripe rust spreads extremely fast — do not delay",
+            "Isolate infected areas if possible",
+            "Remove and burn severely infected plants",
+            "Alert neighboring farmers immediately",
+            "Contact local agricultural extension officer"
+        ],
+        "chemical_treatments": [
+            {
+                "name": "Propiconazole 25% EC",
+                "brand_names": ["Tilt 250 EC", "Bumper 250 EC"],
+                "dose": "500 ml per acre",
+                "method": "Foliar spray",
+                "frequency": "Repeat after 10-14 days — stripe rust spreads fast",
+                "effectiveness": "Very High",
+                "notes": "First choice fungicide for stripe rust in Pakistan"
+            },
+            {
+                "name": "Tebuconazole + Trifloxystrobin",
+                "brand_names": ["Nativo 75 WG"],
+                "dose": "200 g per acre",
+                "method": "Foliar spray",
+                "frequency": "Once, repeat after 21 days if needed",
+                "effectiveness": "Very High",
+                "notes": "Best option for severe stripe rust infections"
+            },
+            {
+                "name": "Azoxystrobin 23% SC",
+                "brand_names": ["Amistar", "Quadris"],
+                "dose": "400 ml per acre",
+                "method": "Foliar spray",
+                "frequency": "Repeat after 14 days",
+                "effectiveness": "High",
+                "notes": "Good protective and curative action"
+            }
+        ],
+        "biological_treatments": [
+            "Bacillus subtilis spray as early preventive measure",
+            "Trichoderma harzianum soil application",
+            "Neem-based formulations for mild early infections"
+        ],
+        "preventive_measures": [
+            "Use stripe rust resistant varieties — TD-1, Chakwal-50",
+            "Sow early to avoid peak rust season",
+            "Avoid late sowing — late crops face higher risk",
+            "Apply balanced NPK fertilizers",
+            "Avoid excessive irrigation during cool months",
+            "Monitor crop weekly during December to March",
+            "Remove volunteer wheat plants between seasons"
+        ],
+        "application_timing": "Apply immediately — do not wait. Spray early morning when dew has dried. Repeat spray is critical for stripe rust.",
+        "safety_precautions": [
+            "Wear full protective equipment during spray",
+            "Do not eat, drink or smoke during application",
+            "Store chemicals in original containers away from children",
+            "Dispose of empty containers safely",
+            "Observe pre-harvest interval strictly"
+        ]
+    },
+
+    "powdery_mildew": {
+        "immediate_actions": [
+            "Apply fungicide as soon as white patches are visible",
+            "Improve air circulation in the crop",
+            "Reduce irrigation frequency temporarily",
+            "Remove and destroy heavily infected plant parts",
+            "Avoid overhead irrigation"
+        ],
+        "chemical_treatments": [
+            {
+                "name": "Triadimefon 25% WP",
+                "brand_names": ["Bayleton", "Amiral"],
+                "dose": "200 g per acre",
+                "method": "Foliar spray",
+                "frequency": "Repeat after 14 days if needed",
+                "effectiveness": "Very High",
+                "notes": "Specifically effective against powdery mildew"
+            },
+            {
+                "name": "Propiconazole 25% EC",
+                "brand_names": ["Tilt 250 EC"],
+                "dose": "500 ml per acre",
+                "method": "Foliar spray",
+                "frequency": "Once, repeat after 21 days",
+                "effectiveness": "High",
+                "notes": "Broad spectrum — works on mildew and rusts"
+            },
+            {
+                "name": "Sulphur 80% WP",
+                "brand_names": ["Sulfex", "Thiovit"],
+                "dose": "1 kg per acre",
+                "method": "Foliar spray or dust",
+                "frequency": "Every 10 days",
+                "effectiveness": "Medium",
+                "notes": "Cheap and widely available — good for mild infections"
+            }
+        ],
+        "biological_treatments": [
+            "Potassium bicarbonate spray (5g per liter)",
+            "Neem oil spray (10ml per liter of water)",
+            "Bacillus subtilis biofungicide spray",
+            "Diluted milk spray (1 part milk + 9 parts water)"
+        ],
+        "preventive_measures": [
+            "Use mildew resistant wheat varieties",
+            "Avoid excessive nitrogen fertilization",
+            "Maintain proper plant spacing — 20-22 cm row spacing",
+            "Improve field drainage and air circulation",
+            "Avoid overhead irrigation — use furrow irrigation",
+            "Remove crop debris after harvest",
+            "Monitor crop in January and February closely"
+        ],
+        "application_timing": "Apply in early morning or late evening. Do not spray sulphur when temperature exceeds 35°C — causes leaf burn.",
+        "safety_precautions": [
+            "Wear protective mask when applying sulphur dust",
+            "Avoid spraying on windy days",
+            "Keep away from eyes — causes irritation",
+            "Wash exposed skin after application",
+            "Follow label instructions for all chemicals"
+        ]
+    }
+}

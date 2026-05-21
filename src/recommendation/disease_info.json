@@ -1,0 +1,120 @@
+{
+    "healthy": {
+        "display_name": "Healthy",
+        "description": "Your wheat crop is healthy with no signs of disease. The leaves show normal green color and proper growth patterns.",
+        "symptoms": [
+            "Uniform green color on all leaves",
+            "No spots, rust, or powder visible",
+            "Normal leaf structure and growth",
+            "Strong stems and healthy tillers"
+        ],
+        "causes": [
+            "No disease present",
+            "Good farming practices being followed",
+            "Proper irrigation and fertilization"
+        ],
+        "severity": "none",
+        "severity_label": "No Disease",
+        "affected_parts": [],
+        "season_risk": "Low risk throughout the year",
+        "economic_impact": "No yield loss expected"
+    },
+
+    "leaf_rust": {
+        "display_name": "Leaf Rust",
+        "description": "Leaf Rust (Brown Rust) is caused by the fungus Puccinia triticina. It is one of the most common and damaging wheat diseases in Pakistan, especially in Punjab.",
+        "symptoms": [
+            "Small orange-brown pustules on upper leaf surface",
+            "Pustules are circular to oval in shape",
+            "Yellow halo may appear around pustules",
+            "Leaves turn yellow and dry out as disease progresses",
+            "Pustules break open and release orange-brown spores",
+            "Severe infection causes premature leaf death"
+        ],
+        "causes": [
+            "Fungal pathogen: Puccinia triticina",
+            "Spreads through airborne spores (urediniospores)",
+            "Favored by temperatures of 15-22°C",
+            "High humidity and dew on leaves",
+            "Use of susceptible wheat varieties",
+            "Dense crop canopy trapping moisture",
+            "Wind carrying spores from infected fields"
+        ],
+        "severity": "high",
+        "severity_label": "High — Immediate Action Required",
+        "affected_parts": [
+            "Leaves",
+            "Leaf sheaths",
+            "Sometimes stems"
+        ],
+        "season_risk": "High risk from February to April in Pakistan",
+        "economic_impact": "Can cause 10-40% yield loss if untreated"
+    },
+
+    "stripe_rust": {
+        "display_name": "Stripe Rust (Yellow Rust)",
+        "description": "Stripe Rust (Yellow Rust) is caused by the fungus Puccinia striiformis. It is extremely destructive and spreads very rapidly in cool and moist conditions. It is a major threat to wheat in Pakistan.",
+        "symptoms": [
+            "Bright yellow to orange pustules arranged in stripes along leaf veins",
+            "Stripes run parallel to the length of the leaf",
+            "Young pustules are lemon-yellow in color",
+            "White to pale green stripes visible on young leaves",
+            "Infected leaves turn brown and die",
+            "Severe infection covers entire leaf in yellow stripes",
+            "Spores look like yellow powder when touched"
+        ],
+        "causes": [
+            "Fungal pathogen: Puccinia striiformis f. sp. tritici",
+            "Spreads rapidly through airborne yellow spores",
+            "Favored by cool temperatures of 10-15°C",
+            "High humidity, fog and dew conditions",
+            "Most dangerous in hilly and cooler regions",
+            "Use of susceptible wheat varieties",
+            "Late sowing increases risk"
+        ],
+        "severity": "very_high",
+        "severity_label": "Very High — Urgent Action Required",
+        "affected_parts": [
+            "Leaves",
+            "Leaf sheaths",
+            "Glumes",
+            "Awns"
+        ],
+        "season_risk": "High risk from December to March in Pakistan",
+        "economic_impact": "Can cause 40-70% yield loss if untreated. Epidemics can destroy entire crops."
+    },
+
+    "powdery_mildew": {
+        "display_name": "Powdery Mildew",
+        "description": "Powdery Mildew is caused by the fungus Blumeria graminis f. sp. tritici. It is easily recognizable by its white powdery coating on leaves and stems.",
+        "symptoms": [
+            "White to gray powdery patches on upper leaf surface",
+            "Powdery coating can be wiped off with finger",
+            "Yellow discoloration under the white patches",
+            "Infected leaves curl and die prematurely",
+            "White patches also appear on stems and heads",
+            "Severely infected plants show stunted growth",
+            "Black dots (cleistothecia) visible in old infections"
+        ],
+        "causes": [
+            "Fungal pathogen: Blumeria graminis f. sp. tritici",
+            "Spreads through airborne conidia spores",
+            "Favored by moderate temperatures of 15-22°C",
+            "High humidity but DRY leaf surfaces",
+            "Dense crop stand with poor air circulation",
+            "Excessive nitrogen fertilization",
+            "Use of susceptible wheat varieties",
+            "Shaded or overcrowded crop conditions"
+        ],
+        "severity": "medium",
+        "severity_label": "Medium — Action Recommended",
+        "affected_parts": [
+            "Leaves",
+            "Stems",
+            "Heads",
+            "Glumes"
+        ],
+        "season_risk": "High risk from January to March in Pakistan",
+        "economic_impact": "Can cause 5-20% yield loss if untreated"
+    }
+}

@@ -1,0 +1,277 @@
+{
+    "general_tips": {
+        "title": "General Wheat Farming Guidelines",
+        "soil_preparation": [
+            "Plow the field 2-3 times before sowing for proper soil aeration",
+            "Maintain soil pH between 6.0 and 7.5 for best wheat growth",
+            "Add organic matter — 4-6 tons of farmyard manure per acre before sowing",
+            "Level the field properly to ensure uniform irrigation",
+            "Break soil clods to prepare fine seedbed for good germination"
+        ],
+        "sowing": [
+            "Best sowing time in Punjab Pakistan: 1st to 30th November",
+            "Use certified seed from reliable source — 40-50 kg per acre",
+            "Seed depth should be 4-6 cm for good germination",
+            "Row spacing of 20-22 cm gives best yield",
+            "Treat seed with fungicide before sowing to prevent seed-borne diseases",
+            "Avoid sowing after 15th December — late sowing reduces yield significantly"
+        ],
+        "irrigation": [
+            "Wheat requires 4-5 irrigations during growing season",
+            "First irrigation: 3-4 weeks after sowing (crown root stage)",
+            "Second irrigation: at tillering stage (45-60 days)",
+            "Third irrigation: at jointing stage (75-85 days)",
+            "Fourth irrigation: at heading/flowering stage (95-105 days)",
+            "Fifth irrigation: at grain filling stage (115-120 days)",
+            "Avoid waterlogging — ensure proper field drainage",
+            "Reduce irrigation in cool foggy weather to prevent fungal diseases"
+        ],
+        "harvesting": [
+            "Harvest when grain moisture is 20-25% for best quality",
+            "Crop is ready when leaves and stems turn golden yellow",
+            "Avoid delayed harvesting — causes grain shattering and losses",
+            "Use combine harvester for large fields to reduce labor cost",
+            "Harvest in dry weather — wet grain causes storage problems",
+            "Thresh immediately after cutting to prevent field losses"
+        ]
+    },
+
+    "fertilizer_recommendations": {
+        "title": "Fertilizer Guidelines for Wheat",
+        "general_guidelines": [
+            "Always do soil test before fertilizer application",
+            "Apply fertilizers in split doses for better efficiency",
+            "Avoid over-fertilization — wastes money and increases disease risk",
+            "Use balanced NPK fertilizers for best results",
+            "Apply fertilizers in moist soil for proper absorption"
+        ],
+        "by_disease": {
+            "healthy": {
+                "nitrogen": {
+                    "total_dose": "50-60 kg N per acre",
+                    "schedule": [
+                        "At sowing: apply 25 kg N per acre (half dose)",
+                        "At first irrigation (3-4 weeks): apply remaining 25-35 kg N"
+                    ],
+                    "products": ["Urea (46% N) — 110-130 kg per acre in two splits"]
+                },
+                "phosphorus": {
+                    "total_dose": "25-30 kg P2O5 per acre",
+                    "schedule": [
+                        "Apply full dose at sowing time"
+                    ],
+                    "products": [
+                        "DAP (18-46-0) — 55-65 kg per acre at sowing",
+                        "Single Super Phosphate — 150 kg per acre"
+                    ]
+                },
+                "potassium": {
+                    "total_dose": "15-20 kg K2O per acre",
+                    "schedule": [
+                        "Apply full dose at sowing time"
+                    ],
+                    "products": ["SOP or MOP — 25-35 kg per acre at sowing"]
+                },
+                "micronutrients": [
+                    "Zinc sulphate — 5 kg per acre if zinc deficiency suspected",
+                    "Boron spray — 0.5 kg per acre at flowering stage"
+                ],
+                "special_notes": "Maintain current balanced fertilization. Avoid excess nitrogen."
+            },
+            "leaf_rust": {
+                "nitrogen": {
+                    "total_dose": "40-50 kg N per acre — REDUCE nitrogen",
+                    "schedule": [
+                        "Do NOT apply extra nitrogen when rust is active",
+                        "Resume normal schedule after disease is controlled"
+                    ],
+                    "products": ["Urea — apply only after fungicide treatment"]
+                },
+                "phosphorus": {
+                    "total_dose": "25-30 kg P2O5 per acre",
+                    "schedule": ["Apply as scheduled — phosphorus helps recovery"],
+                    "products": ["DAP — 55-65 kg per acre"]
+                },
+                "potassium": {
+                    "total_dose": "20-25 kg K2O per acre — INCREASE potassium",
+                    "schedule": [
+                        "Apply potassium immediately — strengthens plant immunity"
+                    ],
+                    "products": [
+                        "SOP (Sulphate of Potash) — 35-40 kg per acre",
+                        "Potassium spray: 1% K2SO4 solution on leaves"
+                    ]
+                },
+                "micronutrients": [
+                    "Zinc foliar spray — 0.5% ZnSO4 solution helps recovery",
+                    "Silicon spray — improves leaf strength against fungal entry"
+                ],
+                "special_notes": "Reduce nitrogen immediately. Increase potassium. Apply fungicide first then resume fertilization."
+            },
+            "stripe_rust": {
+                "nitrogen": {
+                    "total_dose": "STOP nitrogen application immediately",
+                    "schedule": [
+                        "Do NOT apply any nitrogen while stripe rust is active",
+                        "Excess nitrogen makes plants more susceptible to rust",
+                        "Resume nitrogen only after complete disease control"
+                    ],
+                    "products": ["Hold all urea application until disease controlled"]
+                },
+                "phosphorus": {
+                    "total_dose": "25-30 kg P2O5 per acre",
+                    "schedule": ["Continue phosphorus as scheduled"],
+                    "products": ["DAP — 55-65 kg per acre"]
+                },
+                "potassium": {
+                    "total_dose": "25-30 kg K2O per acre — INCREASE urgently",
+                    "schedule": [
+                        "Apply potassium immediately to boost plant immunity",
+                        "Foliar potassium spray gives faster results"
+                    ],
+                    "products": [
+                        "SOP — 40-50 kg per acre",
+                        "Foliar spray: 2% K2SO4 solution — apply with fungicide"
+                    ]
+                },
+                "micronutrients": [
+                    "Silica spray — strengthens cell walls against fungal penetration",
+                    "Zinc spray — 0.5% ZnSO4 boosts plant immunity",
+                    "Magnesium spray — helps maintain chlorophyll in infected leaves"
+                ],
+                "special_notes": "STOP nitrogen immediately. Stripe rust thrives on high nitrogen plants. Focus on potassium and fungicide application."
+            },
+            "powdery_mildew": {
+                "nitrogen": {
+                    "total_dose": "REDUCE nitrogen by 25-30%",
+                    "schedule": [
+                        "Avoid applying nitrogen during active mildew infection",
+                        "Excess nitrogen promotes soft lush growth favored by mildew"
+                    ],
+                    "products": ["Reduce urea application until disease controlled"]
+                },
+                "phosphorus": {
+                    "total_dose": "25-30 kg P2O5 per acre",
+                    "schedule": ["Continue normal phosphorus schedule"],
+                    "products": ["DAP — 55-65 kg per acre"]
+                },
+                "potassium": {
+                    "total_dose": "20-25 kg K2O per acre",
+                    "schedule": [
+                        "Apply potassium to strengthen plant cell walls",
+                        "Strong cell walls resist fungal penetration"
+                    ],
+                    "products": ["SOP — 35-40 kg per acre"]
+                },
+                "micronutrients": [
+                    "Silicon spray — very effective against powdery mildew",
+                    "Calcium spray — strengthens cell walls",
+                    "Avoid excess micronutrients during active infection"
+                ],
+                "special_notes": "Reduce nitrogen. Powdery mildew loves soft succulent growth caused by excess nitrogen. Improve air circulation."
+            }
+        }
+    },
+
+    "seasonal_calendar": {
+        "title": "Wheat Farming Calendar for Punjab Pakistan",
+        "october": {
+            "month": "October",
+            "tasks": [
+                "Prepare field — plow and level",
+                "Apply farmyard manure",
+                "Arrange certified seed",
+                "Get soil test done",
+                "Arrange fertilizers and pesticides"
+            ]
+        },
+        "november": {
+            "month": "November",
+            "tasks": [
+                "Sow wheat — best time 1st to 30th November",
+                "Apply basal dose of DAP and potash at sowing",
+                "Apply half dose of urea at sowing",
+                "First irrigation if soil is dry",
+                "Watch for termite and aphid attack"
+            ]
+        },
+        "december": {
+            "month": "December",
+            "tasks": [
+                "First irrigation at crown root initiation",
+                "Apply remaining urea after first irrigation",
+                "Watch for stripe rust in cool weather",
+                "Monitor for aphids and armyworm",
+                "Keep field weed free"
+            ]
+        },
+        "january": {
+            "month": "January",
+            "tasks": [
+                "Second irrigation at tillering stage",
+                "Watch for powdery mildew in foggy weather",
+                "Monitor stripe rust — high risk month",
+                "Apply fungicide if rust detected",
+                "Control weeds with herbicide if needed"
+            ]
+        },
+        "february": {
+            "month": "February",
+            "tasks": [
+                "Third irrigation at jointing stage",
+                "High risk month for leaf rust and stripe rust",
+                "Inspect crop every 3-4 days for disease",
+                "Apply fungicide spray as preventive if needed",
+                "Monitor for aphid population"
+            ]
+        },
+        "march": {
+            "month": "March",
+            "tasks": [
+                "Fourth irrigation at heading stage",
+                "Apply fungicide at flag leaf stage — very important",
+                "Watch for leaf rust — peak month",
+                "Control aphids to prevent virus spread",
+                "Avoid irrigation during flowering"
+            ]
+        },
+        "april": {
+            "month": "April",
+            "tasks": [
+                "Fifth irrigation at grain filling stage",
+                "Monitor grain filling progress",
+                "Reduce irrigation as crop matures",
+                "Prepare harvesting equipment",
+                "Watch for loose smut on heads"
+            ]
+        },
+        "may": {
+            "month": "May",
+            "tasks": [
+                "Harvest when crop turns golden yellow",
+                "Harvest in dry weather",
+                "Thresh and clean grain properly",
+                "Dry grain to safe moisture level (12-14%)",
+                "Store in clean dry storage facility"
+            ]
+        }
+    },
+
+    "variety_recommendations": {
+        "title": "Recommended Wheat Varieties for Pakistan",
+        "rust_resistant": [
+            "NARC-2011 — resistant to leaf rust and stripe rust",
+            "Faisalabad-2008 — good rust resistance, high yield",
+            "Chakwal-50 — suitable for rainfed areas",
+            "TD-1 — excellent stripe rust resistance",
+            "Punjab-2011 — widely grown in Punjab"
+        ],
+        "high_yield": [
+            "Galaxy-2013 — very high yield potential",
+            "Millat-2011 — good yield in irrigated areas",
+            "Lasani-2008 — popular in Punjab",
+            "Sehar-2006 — good for late sowing"
+        ],
+        "notes": "Always buy certified seed from government approved sources. Avoid using farm-saved seed for more than 2 seasons."
+    }
+}

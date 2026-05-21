@@ -1,0 +1,6 @@
+saved_models/
+__pycache__/
+*.pyc
+.env
+logs/
+*.h5
