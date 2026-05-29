@@ -281,6 +281,7 @@ curl -X POST http://localhost:5000/predict \
 
 This project is developed for academic purposes at the
 **University of Agriculture, Faisalabad**.
+
 © 2026 Amina Habiba - All rights reserved.
 
 ---
@@ -288,8 +289,5 @@ This project is developed for academic purposes at the
 ## 👩‍💻 Developer
 
 **Amina Habiba**
-BS Computer Science
-Batch: 2022-2026
-University of Agriculture, Faisalabad
-Supervisor: Dr. Ahsan Latif
-Year: 2026 
+
+BS Computer Science | Batch: 2022-2026 | University of Agriculture, Faisalabad | Year: 2026 
