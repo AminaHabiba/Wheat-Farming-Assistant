@@ -6,7 +6,7 @@
 
 > Submitted by: **Amina Habiba** (Batch 2022-2026)
 
-> Supervisor: **Sir Dr. Ahsan Latif**
+> Supervisor: Sir Dr. Ahsan Latif
 
 ---
 
