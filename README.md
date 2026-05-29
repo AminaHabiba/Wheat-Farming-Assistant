@@ -75,12 +75,13 @@ Wheat_Farming_Assistant/
 ├── saved_models/                   # Trained model
 ├── results/                        # Evaluation charts
 ├── docs/                           # Documentation
+│   ├── screenshots/
+│   ├── user_manual.md          
+│   └── api_documentation.md    
 ├── main.py                         # Start everything
 ├── requirements.txt
 └── README.md
-├── .gitignore
-├── run_backend.sh
-└── run_frontend.sh
+└── .gitignore
 ```
 
 ---

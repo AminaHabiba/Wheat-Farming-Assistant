@@ -28,8 +28,8 @@ def print_banner():
     print()
     print("=" * 55)
     print("   AI-Powered Wheat Farming Assistant")
-    print("   Amina Habiba — 2022-ag-7802")
-    print("   UAF Faisalabad — 2026")
+    print("   Amina Habiba  ")
+    print("   UAF Faisalabad ")
     print("=" * 55)
     print()
 

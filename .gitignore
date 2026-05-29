@@ -1,6 +1,20 @@
-saved_models/
 __pycache__/
 *.pyc
+*.pyo
 .env
+
+# Dataset too large
+dataset/   
+
 logs/
+
+saved_models/
 *.h5
+
+# Uploads temp folder
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db

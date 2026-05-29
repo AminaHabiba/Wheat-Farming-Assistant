@@ -14,7 +14,7 @@ import base64
 
 # ── Page Config ──────────────────────────────────────────────
 st.set_page_config(
-    page_title="Wheat Farming Assistant — UAF",
+    page_title="Wheat Farming Assistant",
     page_icon="🌾",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -595,7 +595,7 @@ def show_sidebar():
                 <h4>Amina Habiba</h4>
                 <p>2022-ag-7802</p>
                 <p>BS Computer Science</p>
-                <p>UAF Faisalabad — 2026</p>
+                <p>UAF Faisalabad - 2026</p>
                 <p style='margin-top:6px;
                 font-size:0.73rem;opacity:0.8'>
                 Supervised by:<br>
@@ -666,7 +666,7 @@ def show_prediction(result):
 
     if is_uncertain:
         st.warning(
-            "⚠️ Low confidence — please upload "
+            "⚠️ Low confidence - please upload "
             "a clearer image."
         )
 
@@ -993,7 +993,7 @@ def show_chatbot():
             </h3>
             <p style='margin:5px 0 0 0;
             font-size:0.88rem;opacity:0.9'>
-                Powered by Llama 3.2 — Ask anything
+                Powered by Llama 3.2 - Ask anything
                 about wheat farming!
             </p>
         </div>
@@ -1363,7 +1363,7 @@ def main():
             &nbsp;|&nbsp;
             BS Computer Science
             &nbsp;|&nbsp;
-            UAF Faisalabad — 2026
+            UAF Faisalabad, 2026
         </div>
         """,
         unsafe_allow_html=True

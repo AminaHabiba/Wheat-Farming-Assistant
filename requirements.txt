@@ -1,7 +1,7 @@
 # ============================================================
 # AI-Powered Wheat Farming Assistant with Disease Detection
 # Requirements File
-# University of Agriculture, Faisalabad - FYP 2026
+# Amina Habiba FYP, University of Agriculture, Faisalabad 
 # ============================================================
 
 # ── Core Python ─────────────────────────────────────────────
