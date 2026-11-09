@@ -1,7 +1,6 @@
 # main.py
 
 # Main entry point (starts all services).
-# Usage: python main.py
 
 import subprocess
 import sys
@@ -10,7 +9,7 @@ import os
 import webbrowser
 from pathlib import Path
 
-# ── Constants ────────────────────────────────────────────────
+# Constants 
 PROJECT_ROOT  = Path(__file__).resolve().parent
 BACKEND_CMD   = [sys.executable,
                  "backend/app.py"]
@@ -23,7 +22,7 @@ BACKEND_URL   = "http://localhost:5000"
 OLLAMA_URL    = "http://localhost:11434"
 
 
-# ── Print Banner ─────────────────────────────────────────────
+# Print Banner
 def print_banner():
     print()
     print("=" * 55)
@@ -34,7 +33,7 @@ def print_banner():
     print()
 
 
-# ── Check Service Running ────────────────────────────────────
+# Check Service Running
 def is_service_running(url, timeout=2):
     """
     Checks if a service is already running
@@ -53,7 +52,7 @@ def is_service_running(url, timeout=2):
         return False
 
 
-# ── Start Ollama ─────────────────────────────────────────────
+# Start Ollama 
 def start_ollama():
     """
     Starts Ollama server if not already running.
@@ -105,7 +104,7 @@ def start_ollama():
         return None
 
 
-# ── Start Flask Backend ──────────────────────────────────────
+# Start Flask Backend
 def start_backend():
     """
     Starts Flask backend server.
@@ -150,7 +149,7 @@ def start_backend():
         return None
 
 
-# ── Start Streamlit Frontend ─────────────────────────────────
+# Start Streamlit Frontend 
 def start_frontend():
     """
     Starts Streamlit frontend.
@@ -189,7 +188,7 @@ def start_frontend():
         return None
 
 
-# ── Open Browser ─────────────────────────────────────────────
+# Open Browser 
 def open_browser():
     """Opens app in default browser."""
     print("\n   Opening browser...")
@@ -197,7 +196,7 @@ def open_browser():
     webbrowser.open(APP_URL)
 
 
-# ── Print Status ─────────────────────────────────────────────
+# Print Status
 def print_status():
     """Prints final status of all services."""
     print()
@@ -244,7 +243,7 @@ def print_status():
     print("=" * 55)
 
 
-# ── Stop All Services ────────────────────────────────────────
+# Stop All Services
 def stop_all(processes):
     """
     Stops all running processes.
@@ -270,7 +269,7 @@ def stop_all(processes):
     print("=" * 55)
 
 
-# ── Main ─────────────────────────────────────────────────────
+# Main
 def main():
     print_banner()
 

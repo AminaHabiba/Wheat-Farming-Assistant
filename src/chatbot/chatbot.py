@@ -12,7 +12,7 @@ sys.path.append(str(Path(__file__).resolve()
 import json
 import ollama
 
-# ── Paths ────────────────────────────────────────────────────
+# Paths
 REC_DIR = Path(__file__).resolve()\
           .parent.parent / "recommendation"
 
@@ -20,13 +20,13 @@ DISEASE_INFO_PATH  = REC_DIR / "disease_info.json"
 TREATMENT_PATH     = REC_DIR / "treatment_data.json"
 FARMING_TIPS_PATH  = REC_DIR / "farming_tips.json"
 
-# ── Model Settings ───────────────────────────────────────────
+# Model Settings 
 MODEL_NAME     = "llama3.2:3b"
 MAX_TOKENS     = 1024
 TEMPERATURE    = 0.7
 
 
-# ── Load Knowledge Base ──────────────────────────────────────
+# Load Knowledge Base 
 def load_knowledge_base():
     """
     Loads all three JSON files.
@@ -50,7 +50,7 @@ def load_knowledge_base():
            farming_tips
 
 
-# ── Build System Prompt ──────────────────────────────────────
+# Build System Prompt 
 def build_system_prompt():
     """
     Builds the system prompt that tells
@@ -149,7 +149,7 @@ Your role is to help wheat farmers in Pakistan — especially Punjab — with:
     return system_prompt
 
 
-# ── Check Ollama Running ─────────────────────────────────────
+# Check Ollama Running 
 def check_ollama():
     try:
         models = ollama.list()
@@ -188,7 +188,7 @@ def check_ollama():
         return False, \
             f"Ollama not running: {str(e)}"
 
-# ── Chat Function ────────────────────────────────────────────
+# Chat Function 
 def chat(question, chat_history=None):
     """
     Main chat function.
@@ -252,7 +252,7 @@ def chat(question, chat_history=None):
 3. Then restart the Streamlit app"""
 
 
-# ── Stream Chat Function ─────────────────────────────────────
+# Stream Chat Function 
 def chat_stream(question, chat_history=None):
     """
     Streaming version of chat.
@@ -311,7 +311,7 @@ def chat_stream(question, chat_history=None):
         yield f"❌ Error: {str(e)}"
 
 
-# ── Quick Test ───────────────────────────────────────────────
+# Quick Test 
 if __name__ == "__main__":
     print("=" * 55)
     print("  Wheat Chatbot — Ollama Test")

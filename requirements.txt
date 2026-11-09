@@ -1,39 +1,36 @@
-# ============================================================
 # AI-Powered Wheat Farming Assistant with Disease Detection
-# Requirements File
 # Amina Habiba FYP, University of Agriculture, Faisalabad 
-# ============================================================
 
-# ── Core Python ─────────────────────────────────────────────
+# Core Python 
 numpy==1.26.4
 pandas==2.2.2
 
-# ── Digital Image Processing ────────────────────────────────
+# Digital Image Processing 
 opencv-python==4.9.0.80        # image preprocessing, DIP pipeline
 Pillow==10.3.0                 # image loading and format support
 
-# ── Deep Learning ───────────────────────────────────────────
+# Deep Learning 
 tensorflow==2.16.1             # CNN model training and inference
 keras==3.3.3                   # high-level model API (included in TF)
 scikit-learn==1.4.2            # evaluation metrics, train/test split
 
-# ── Visualization ───────────────────────────────────────────
+# Visualization 
 matplotlib==3.9.0              # accuracy/loss curves, confusion matrix
 seaborn==0.13.2                # styled confusion matrix heatmap
 
-# ── Backend (Flask API) ─────────────────────────────────────
+# Backend (Flask API) 
 flask==3.0.3                   # REST API server
 flask-cors==4.0.1              # allow frontend to call API
 Werkzeug==3.0.3                # secure file uploads
 
-# ── Frontend (Streamlit UI) ─────────────────────────────────
+# Frontend (Streamlit UI) 
 streamlit==1.35.0              # web UI for image upload & results
 
-# ── Utilities ───────────────────────────────────────────────
+# Utilities 
 requests==2.32.2               # HTTP requests (frontend ↔ backend)
 python-dotenv==1.0.1           # load environment variables from .env
 tqdm==4.66.4                   # progress bars during training/processing
 
-# ── Jupyter / Notebook Support ──────────────────────────────
+# Jupyter / Notebook Support 
 jupyterlab==4.2.1              # notebook IDE
 ipywidgets==8.1.3              # interactive widgets in notebooks

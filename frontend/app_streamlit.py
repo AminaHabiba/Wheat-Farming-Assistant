@@ -1,7 +1,5 @@
 # frontend/app_streamlit.py
 
-# To Run: streamlit run frontend/app_streamlit.py
-
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve()
@@ -12,7 +10,7 @@ import requests
 from PIL import Image
 import base64
 
-# ── Page Config ──────────────────────────────────────────────
+# Page Config
 st.set_page_config(
     page_title="Wheat Farming Assistant",
     page_icon="🌾",
@@ -20,12 +18,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# ── Paths ────────────────────────────────────────────────────
+# Paths
 ASSETS_DIR = Path(__file__).resolve().parent \
              / "assets"
 UAF_LOGO   = ASSETS_DIR / "uaf_logo.png"
 
-# ── Constants ────────────────────────────────────────────────
+# Constants
 API_URL = "http://localhost:5000"
 
 DISEASE_COLORS = {
@@ -57,7 +55,7 @@ SEVERITY_ICONS = {
 }
 
 
-# ── Load Image As Base64 ─────────────────────────────────────
+# Load Image As Base64
 def get_image_base64(image_path):
     try:
         with open(str(image_path), "rb") as f:
@@ -67,12 +65,12 @@ def get_image_base64(image_path):
         return None
 
 
-# ── Custom CSS ───────────────────────────────────────────────
+# Custom CSS
 def load_css():
     st.markdown("""
     <style>
         .block-container {
-            padding-top: 1rem !important;
+            padding-top: 4rem !important;
         }
         .main-header {
             background: linear-gradient(
@@ -95,22 +93,41 @@ def load_css():
             font-size: 1.9rem;
             margin: 0;
             font-weight: 800;
+            color: white;
         }
         .main-header p {
             font-size: 0.9rem;
             margin: 5px 0 0 0;
             opacity: 0.9;
         }
+
+        /* White circular badge behind the original UAF logo */
+        .main-header-logo-circle {
+            width: 100px;
+            height: 100px;
+            min-width: 100px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 3px solid
+                        rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+        /* The logo itself stays transparent and keeps its original shape */
         .main-header-logo {
             width: 75px;
             height: 75px;
-            border-radius: 50%;
-            border: 3px solid
-                    rgba(255,255,255,0.4);
             object-fit: contain;
-            background: white;
-            padding: 4px;
+            display: block;
+            background: transparent;
+            padding: 0;
+            border: none;
+            border-radius: 0;
         }
+
         .healthy-card {
             background: linear-gradient(
                 135deg, #e8f5e9, #f1f8e9);
@@ -228,7 +245,7 @@ def load_css():
             font-weight: 700;
         }
 
-        /* ── Chatbot Styles ── */
+        /* Chatbot Styles */
         .chat-container {
             background: #f8f9fa;
             border-radius: 14px;
@@ -327,12 +344,37 @@ def load_css():
         .dev-card h4 {
             margin: 0 0 4px 0;
             font-size: 0.95rem;
+            color: white;
         }
         .dev-card p {
             margin: 2px 0;
             font-size: 0.8rem;
             opacity: 0.9;
         }
+
+        /* Separate white circle for the developer-card logo too */
+        .dev-logo-circle {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 6px auto;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .dev-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            display: block;
+            background: transparent;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+        }
+
         .footer {
             background: linear-gradient(
                 135deg, #1B5E20, #2E7D32);
@@ -360,7 +402,7 @@ def load_css():
     """, unsafe_allow_html=True)
 
 
-# ── Check API ────────────────────────────────────────────────
+# Check API
 def check_api():
     try:
         r = requests.get(
@@ -370,7 +412,7 @@ def check_api():
         return False
 
 
-# ── Check Ollama ─────────────────────────────────────────────
+# Check Ollama
 def check_ollama():
     try:
         import ollama
@@ -380,10 +422,10 @@ def check_ollama():
         return False
 
 
-# ── Call Predict API ─────────────────────────────────────────
+# Call Predict API
 def call_predict_api(image_bytes, filename):
     try:
-        files    = {"image": (
+        files = {"image": (
             filename, image_bytes,
             "image/jpeg")}
         response = requests.post(
@@ -392,17 +434,17 @@ def call_predict_api(image_bytes, filename):
         return response.json()
     except requests.exceptions.ConnectionError:
         return {
-            "status" : "error",
+            "status": "error",
             "message": "Cannot connect to backend."
         }
     except Exception as e:
         return {
-            "status" : "error",
+            "status": "error",
             "message": str(e)
         }
 
 
-# ── Call Chatbot ─────────────────────────────────────────────
+# Call Chatbot
 def call_chatbot(question, chat_history):
     """
     Calls local Ollama chatbot.
@@ -418,14 +460,14 @@ def call_chatbot(question, chat_history):
                f"`ollama serve`"
 
 
-# ── Probability Bars ─────────────────────────────────────────
+# Probability Bars
 def show_probability_bars(all_probs, disease):
     bars_html = ""
     for cls, prob in all_probs.items():
         label = cls.replace("_", " ").title()
         color = DISEASE_COLORS.get(cls, "#666")
-        icon  = DISEASE_ICONS.get(cls, "•")
-        bold  = "font-weight:800;" \
+        icon = DISEASE_ICONS.get(cls, "•")
+        bold = "font-weight:800;" \
             if cls == disease else ""
 
         bars_html += f"""
@@ -450,32 +492,35 @@ def show_probability_bars(all_probs, disease):
                 unsafe_allow_html=True)
 
 
-# ── Sidebar ──────────────────────────────────────────────────
+# Sidebar
 def show_sidebar():
     with st.sidebar:
 
         # UAF Logo
         if UAF_LOGO.exists():
-            logo = Image.open(str(UAF_LOGO))
-            col1, col2 = st.columns([1, 2])
-            with col1:
-                st.image(logo, width=65)
-            with col2:
-                st.markdown(
-                    """
-                    <div style='padding-top:6px'>
-                    <b style='font-size:0.88rem;
+            sidebar_logo_b64 = get_image_base64(UAF_LOGO)
+            st.markdown(
+                f"""
+                <div style='display:flex;
+                align-items:center;gap:10px;
+                padding:6px 0'>
+                    <img src="data:image/png;base64,{sidebar_logo_b64}"
+                    width="70"
+                    style="flex-shrink:0">
+                    <div style='line-height:1.3'>
+                    <b style='font-size:0.91rem;
                     color:#1B5E20'>
                     University of Agriculture
                     </b><br>
-                    <span style='font-size:
-                    0.78rem;color:#666'>
+                    <span style='font-size:0.90rem;
+                    color:#666'>
                     Faisalabad
                     </span>
                     </div>
-                    """,
-                    unsafe_allow_html=True
-                )
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         else:
             st.markdown(
                 """
@@ -515,9 +560,9 @@ def show_sidebar():
         st.markdown("---")
         st.markdown("**🦠 Detectable Diseases**")
         diseases = [
-            ("✅ Healthy",        "#2E7D32"),
-            ("🔴 Leaf Rust",      "#C62828"),
-            ("🟡 Stripe Rust",    "#E65100"),
+            ("✅ Healthy", "#2E7D32"),
+            ("🔴 Leaf Rust", "#C62828"),
+            ("🟡 Stripe Rust", "#E65100"),
             ("⚪ Powdery Mildew", "#6A1B9A")
         ]
         for label, color in diseases:
@@ -538,7 +583,7 @@ def show_sidebar():
 
         # Service Status
         st.markdown("**🔌 Service Status**")
-        api_ok    = check_api()
+        api_ok = check_api()
         ollama_ok = check_ollama()
 
         statuses = [
@@ -580,21 +625,20 @@ def show_sidebar():
         logo_b64 = get_image_base64(UAF_LOGO) \
             if UAF_LOGO.exists() else None
         logo_img = (
+            f'<div class="dev-logo-circle">'
             f'<img src="data:image/png;base64,'
-            f'{logo_b64}" width="40" '
-            f'style="border-radius:50%;'
-            f'background:white;padding:3px;'
-            f'margin-bottom:6px"><br>'
+            f'{logo_b64}" class="dev-logo">'
+            f'</div>'
             if logo_b64
-            else '👩‍💻<br>'
+            else '👩‍💻'
         )
         st.markdown(
             f"""
             <div class="dev-card">
                 {logo_img}
                 <h4>Amina Habiba</h4>
-                <p>2022-ag-7802</p>
                 <p>BS Computer Science</p>
+                <p>Batch 2022-2026</p>
                 <p>UAF Faisalabad - 2026</p>
                 <p style='margin-top:6px;
                 font-size:0.73rem;opacity:0.8'>
@@ -607,25 +651,25 @@ def show_sidebar():
         )
 
 
-# ── Show Prediction ──────────────────────────────────────────
+# Show Prediction
 def show_prediction(result):
-    pred    = result["prediction"]
-    rec     = result["recommendation"]
-    info    = rec["disease_info"]
+    pred = result["prediction"]
+    rec = result["recommendation"]
+    info = rec["disease_info"]
     disease = pred["disease"]
 
-    confidence   = pred["confidence"]
-    is_healthy   = pred["is_healthy"]
+    confidence = pred["confidence"]
+    is_healthy = pred["is_healthy"]
     is_uncertain = pred["is_uncertain"]
-    severity     = info["severity"]
+    severity = info["severity"]
 
-    color     = DISEASE_COLORS.get(
+    color = DISEASE_COLORS.get(
         disease, "#666")
-    icon      = DISEASE_ICONS.get(
+    icon = DISEASE_ICONS.get(
         disease, "•")
     sev_color = SEVERITY_COLORS.get(
         severity, "#666")
-    sev_icon  = SEVERITY_ICONS.get(
+    sev_icon = SEVERITY_ICONS.get(
         severity, "•")
 
     card_class = "healthy-card" \
@@ -866,7 +910,8 @@ def show_prediction(result):
                     treatment["safety_precautions"]:
                 st.markdown(
                     f"<span style='color:#E65100'>"
-                    f"⚠️</span> {s}")
+                    f"⚠️</span> {s}",
+                    unsafe_allow_html=True)
 
     with tab3:
         fertilizer = rec["fertilizer"]
@@ -878,7 +923,7 @@ def show_prediction(result):
             unsafe_allow_html=True
         )
         c1, c2, c3 = st.columns(3)
-        fert_data  = [
+        fert_data = [
             (c1, "🟡 Nitrogen",
              fertilizer["nitrogen"], "#F9A825"),
             (c2, "🔵 Phosphorus",
@@ -920,7 +965,7 @@ def show_prediction(result):
 
     with tab4:
         farming = rec["farming"]
-        c1, c2  = st.columns(2)
+        c1, c2 = st.columns(2)
         with c1:
             st.markdown(
                 "<div class='section-header'>"
@@ -970,7 +1015,7 @@ def show_prediction(result):
                 )
 
 
-# ── Chatbot Tab ──────────────────────────────────────────────
+# Chatbot Tab
 def show_chatbot():
     """Renders the AI chatbot interface."""
 
@@ -988,7 +1033,7 @@ def show_chatbot():
         135deg,#1B5E20,#2E7D32);
         padding:18px 25px;border-radius:12px;
         color:white;margin-bottom:15px'>
-            <h3 style='margin:0;font-size:1.3rem'>
+            <h3 style='margin:0;font-size:1.3rem;color:white'>
                 🤖 AI Wheat Farming Assistant
             </h3>
             <p style='margin:5px 0 0 0;
@@ -1140,13 +1185,12 @@ def show_chatbot():
             "🗑️ Clear Chat",
             use_container_width=False
         ):
-            st.session_state.chat_history  = []
-            st.session_state\
-                .messages_display = []
+            st.session_state.chat_history = []
+            st.session_state.messages_display = []
             st.rerun()
 
 
-# ── Process Chat Message ─────────────────────────────────────
+# Process Chat Message
 def process_chat(question):
     """
     Processes a chat message and
@@ -1154,13 +1198,13 @@ def process_chat(question):
     """
     # add user message to display
     st.session_state.messages_display.append({
-        "role"   : "user",
+        "role": "user",
         "content": question
     })
 
     # add to history for context
     st.session_state.chat_history.append({
-        "role"   : "user",
+        "role": "user",
         "content": question
     })
 
@@ -1173,13 +1217,13 @@ def process_chat(question):
 
     # add bot response to display
     st.session_state.messages_display.append({
-        "role"   : "assistant",
+        "role": "assistant",
         "content": response
     })
 
     # add to history
     st.session_state.chat_history.append({
-        "role"   : "assistant",
+        "role": "assistant",
         "content": response
     })
 
@@ -1191,17 +1235,19 @@ def process_chat(question):
     st.rerun()
 
 
-# ── Main App ─────────────────────────────────────────────────
+# Main App
 def main():
     load_css()
     show_sidebar()
 
     # Header
-    logo_b64  = get_image_base64(UAF_LOGO) \
+    logo_b64 = get_image_base64(UAF_LOGO) \
         if UAF_LOGO.exists() else None
     logo_html = (
+        f'<div class="main-header-logo-circle">'
         f'<img src="data:image/png;base64,'
         f'{logo_b64}" class="main-header-logo">'
+        f'</div>'
         if logo_b64
         else '<span style="font-size:2.5rem">'
              '🌾</span>'
@@ -1231,7 +1277,7 @@ def main():
         "💬 Farming Assistant (AI Chatbot)"
     ])
 
-    # ── Tab 1: Disease Detection ──────────────
+    # Tab 1: Disease Detection
     with tab_detect:
 
         if not check_api():
@@ -1328,8 +1374,7 @@ def main():
                     "🔄 Analyzing image..."
                 ):
                     uploaded_file.seek(0)
-                    image_bytes = \
-                        uploaded_file.read()
+                    image_bytes = uploaded_file.read()
                     result = call_predict_api(
                         image_bytes,
                         uploaded_file.name
@@ -1349,7 +1394,7 @@ def main():
                         f"❌ {result['message']}"
                     )
 
-    # ── Tab 2: Chatbot ────────────────────────
+    # Tab 2: Chatbot
     with tab_chat:
         show_chatbot()
 
@@ -1368,7 +1413,6 @@ def main():
         """,
         unsafe_allow_html=True
     )
-
 
 if __name__ == "__main__":
     main()
